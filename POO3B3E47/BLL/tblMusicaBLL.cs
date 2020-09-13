@@ -1,32 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
+using POO3B3E47.DAL;
+using POO3B3E47.DTO;
 
 namespace POO3B3E47.BLL
 {
     public class tblMusicaBLL
     {
-        tblMusicaBLL
+        private DALBD daoBanco = new DALBD();
 
-
-private DALBD daoBanco = new DALBD();
+        public DataTable index()
+        {
+            string sql = string.Format($@"select * from TBL_Musica");
+            return daoBanco.execQuery(sql);
+        }
 
         public void InserirMusica(tblMusicaDTO dtomusica)
         {
-            string sql = string.Format($@"INSERT INTO TBL_Musica VALUES (NULL, '{dtomusica.idMusica}',
+            string sql = string.Format($@"INSERT INTO TBL_Musica VALUES (NULL, '{dtomusica.IdMusica}',
                                                                        '{dtomusica.nome}',
                                                                        '{dtomusica.nomeAutor}',
                                                                        '{dtomusica.idGravadora}',
                                                                        '{dtomusica.idCD}');");
 
-            daoBanco.executarComando(sql);
-        }
-
-        public DataTable PesquisarMusica(string condicao)
-        {
-            string sql = string.Format($@"select * from TBL_Musica where " + condicao);
-            return daoBanco.ExecutarConsulta(sql);
+            daoBanco.execCommand(sql);
         }
 
         public void AlterarMusica(tblMusicaDTO dtoMusica)
@@ -36,13 +36,13 @@ private DALBD daoBanco = new DALBD();
                                                         idGravadora = '{dtoMusica.Id_gravadora}',
                                                         idCD = '{dtoMusica.Id_cd}'
                                                 where idMusica = '{dtoMusica.Id_musica}';");
-            daoBanco.executarComando(sql);
+            daoBanco.execCommand(sql);
         }
 
         public void ExcluirMusica(tblMusicaDTO dtomusica)
         {
             string sql = string.Format($@"DELETE FROM TBL_Musica where idMusica = {dtomusica.Id_musica};");
-            daoBanco.executarComando(sql);
+            daoBanco.execCommand(sql);
         }
 
     }

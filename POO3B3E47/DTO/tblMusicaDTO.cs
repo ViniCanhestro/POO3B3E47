@@ -11,12 +11,12 @@ namespace POO3B3E47.DTO
         private int idMusica, idGravadora, idCD;
         private String nome, nomeAutor;
 
-        public int idMusica { get => idMusica; set => idMusica = value; }
-        public int idGravadora { get => idGravadora; set => idGravadora = value; }
-        public int idCD { get => idCD; set => idCD = value; }
+        public int IdMusica { get => idMusica; set => idMusica = value; }
+        public int IdGravadora { get => idGravadora; set => idGravadora = value; }
+        public int IdCD { get => idCD; set => idCD = value; }
 
 
-        public string nome
+        public string Nome
         {
             set
             {
@@ -32,7 +32,7 @@ namespace POO3B3E47.DTO
             get { return this.nome; }
         }
 
-        public string nomeAutor
+        public string NomeAutor
         {
             set
             {

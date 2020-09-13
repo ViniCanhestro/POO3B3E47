@@ -44,6 +44,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=8.0.20.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -68,13 +69,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="UI\signIn.aspx" />
+    <Content Include="UI\FormMusica.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\tblCdBLL.cs" />
     <Compile Include="BLL\tblGravadoraBLL.cs" />
     <Compile Include="BLL\tblMusicaBLL.cs" />
+    <Compile Include="DAL\DALBD.cs" />
     <Compile Include="DTO\tblCdDTO.cs" />
     <Compile Include="DTO\tblGravadoraDTO.cs" />
     <Compile Include="DTO\tblMusicaDTO.cs" />
@@ -82,12 +84,12 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UI\signIn.aspx.cs">
-      <DependentUpon>signIn.aspx</DependentUpon>
+    <Compile Include="UI\FormMusica.aspx.cs">
+      <DependentUpon>FormMusica.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UI\signIn.aspx.designer.cs">
-      <DependentUpon>signIn.aspx</DependentUpon>
+    <Compile Include="UI\FormMusica.aspx.designer.cs">
+      <DependentUpon>FormMusica.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

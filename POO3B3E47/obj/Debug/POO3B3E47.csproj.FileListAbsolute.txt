@@ -1,0 +1,2 @@
+C:\Users\Dinopc\Desktop\POO3B3E47\POO3B3E47\obj\Debug\POO3B3E47.csprojAssemblyReference.cache
+C:\Users\Dinopc\Desktop\POO3B3E47\POO3B3E47\obj\Debug\POO3B3E47.csproj.CoreCompileInputs.cache
